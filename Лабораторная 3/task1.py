@@ -24,6 +24,12 @@ class PaperBook(Book):
     def __init__(self, name: str, author: str, pages: int):
         super().__init__(name, author)
         self.pages = pages
+    
+    def __str__(self):
+        return super().__str__()
+
+    def __repr__(self):
+        return super().__repr__()
 
     @property
     def pages(self) -> int:
@@ -43,6 +49,12 @@ class AudioBook(Book):
         super().__init__(name, author)
         self.duration = duration
 
+    def __str__(self):
+        return super().__str__()
+
+    def __repr__(self):
+        return super().__repr__()
+    
     @property
     def duration(self) -> float:
         return self.duration
