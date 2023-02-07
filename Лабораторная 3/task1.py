@@ -29,7 +29,7 @@ class PaperBook(Book):
         return super().__str__()
 
     def __repr__(self):
-        return super().__repr__()
+        return f"{self.__class__.__name__}(name={self.name!r}, author={self.author!r}, pages={self.pages!r})"
 
     @property
     def pages(self) -> int:
@@ -53,7 +53,7 @@ class AudioBook(Book):
         return super().__str__()
 
     def __repr__(self):
-        return super().__repr__()
+        return f"{self.__class__.__name__}(name={self.name!r}, author={self.author!r}, duration={self.duration!r})"
     
     @property
     def duration(self) -> float:
