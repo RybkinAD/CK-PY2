@@ -14,7 +14,8 @@ class Buildings:
         return f'{self.kind} с {self.floors} этажами'
 
     def __repr__(self) -> str:
-        return f'{self.kind} с {self.floors} этажами'
+        return f"{self.__class__.__name__}(kind={self.kind!r}, floors={self.floors!r}, " \
+               f"entrances={self.entrances!r}, elevator={self.elevator!r})"
 
     def elevator_repair(self) -> None:
         """
@@ -53,7 +54,8 @@ class University(Buildings):
         return super().__str__()
 
     def __repr__(self):
-        return super().__repr__()
+        return f"{self.__class__.__name__}(kind={self.kind!r}, floors={self.floors!r}, " \
+               f"entrances={self.entrances!r}, elevator={self.elevator!r}, cafeterias={self.cafeterias!r})"
 
     def elevator_repair(self) -> None:
         """
