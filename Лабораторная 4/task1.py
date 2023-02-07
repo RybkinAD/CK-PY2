@@ -50,9 +50,6 @@ class University(Buildings):
         super().__init__(kind, floors, entrances, elevator)
         self.cafeterias = cafeterias
 
-    def __str__(self):
-        return super().__str__()
-
     def __repr__(self):
         return f"{self.__class__.__name__}(kind={self.kind!r}, floors={self.floors!r}, " \
                f"entrances={self.entrances!r}, elevator={self.elevator!r}, cafeterias={self.cafeterias!r})"
